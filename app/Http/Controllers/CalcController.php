@@ -11,19 +11,15 @@ class CalcController extends Controller
         $result = 0;
         if ($operator == 'addition') {
             $result = $num1 + $num2;
-        }
-        elseif ($operator == 'subtraction') {
+        } elseif ($operator == 'subtraction') {
             $result = $num1 - $num2;
-        }
-        elseif ($operator == 'multiplication') {
+        } elseif ($operator == 'multiplication') {
             $result = $num1 * $num2;
-        }
-        elseif ($operator == 'division') {
+        } elseif ($operator == 'division') {
             $result = $num1 / $num2;
-        }
-        else {
+        } else {
             $result =  '正しく入力してください';
         }
-        return view ('message.calc', ['result' => $result]);
+        return view('message.calc', ['result' => $result]);
     }
 }
